@@ -1,0 +1,1 @@
+An API for the Solita Dev Academy 2021 exercise.
