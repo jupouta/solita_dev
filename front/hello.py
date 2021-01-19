@@ -2,6 +2,7 @@ import argparse
 import http.client
 import json
 
+# TODO: change the data formatting to data['names']
 def names_to_alphabetical_order(data):  # List names in alphabetical order
     data = sorted(data, key=lambda k: k['name'])
     for name in data:
@@ -25,7 +26,7 @@ def person_amount(data, name):
         if element['name'] == name:
             print(name + ':', element['amount'])
             return
-    print('No person found!')
+    print(f'Didn\'t find a person named {name}!')
 
 def main():
     parser = argparse.ArgumentParser(description='Process arguments.')
