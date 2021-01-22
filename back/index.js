@@ -1,6 +1,9 @@
 const http = require('http')
 const express = require('express')
 const app = express()
+const cors = require('cors')
+
+app.use(cors())
 
 let data = require('./names.json')
 
@@ -11,17 +14,16 @@ app.get('/', (req, res) => {
 
 // names data
 app.get('/api/names', (req, res) => {
+    console.log('sending data')
     res.json(data['names'])
 })
 
 // a given name
-// TODO: name to lowercase? .toLowerCase()
 app.get('/api/names/:name', (request, response) => {
     const name = request.params.name
-    console.log(name)
+    console.log('sending person')
     const found_person = data['names'].find(
         found_person => found_person.name === name)
-    console.log(found_person)
     response.json(found_person)
   })
 

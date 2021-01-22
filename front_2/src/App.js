@@ -31,7 +31,6 @@ const Name = ({names, name}) => {
   return (
     <div></div>
   )
-  
 }
 
 
@@ -53,7 +52,7 @@ const App = ({names}) => {
   }
 
   var total = 0
-  names.forEach(n => total += n.amount)
+  names.forEach(n => total += n.amount) // count the total of all amounts
 
   return (
     <div className="App">
@@ -64,11 +63,6 @@ const App = ({names}) => {
       </p>
   
       <label htmlFor="order-select">Choose an order:</label>
-
-      {/* <select name="order-select">
-        <option selected="selected" name="name_key" value="alpha">Alphabetical order</option>
-        <option name="name_key" value="order">Order by amount</option>
-      </select> */}
       <p>
         <button onClick={handleAlpha} className="button">Alphabetical order</button>
       </p>
@@ -80,9 +74,6 @@ const App = ({names}) => {
       <select name="name-select" onChange={handleChange}>
         {names.map(person => <option name="name_key" key={person.name} value={person.name}>{person.name}</option>)}
       </select>
-      {/* <p>
-        <button type="submit" className="button">Find this name</button>
-      </p> */}
       <Name name={person} names={names}/>
 
     </div>

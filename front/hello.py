@@ -2,7 +2,7 @@ import argparse
 import http.client
 import json
 
-# TODO: change the data formatting to data['names']
+
 def names_to_alphabetical_order(data):  # List names in alphabetical order
     data = sorted(data, key=lambda k: k['name'])
     for name in data:
