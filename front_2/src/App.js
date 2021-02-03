@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 
+// Return the names in the asked order
 const Names = ({names, nameState}) => {
   if (nameState === 'alpha') {
     names = names.sort((a, b) => a.name.localeCompare(b.name));
@@ -19,6 +20,7 @@ const Names = ({names, nameState}) => {
   )
 }
 
+// The requested name and its amount
 const Name = ({names, name}) => {
   const person = names.filter(p => p.name === name)[0]
   if (person) {
@@ -33,11 +35,12 @@ const Name = ({names, name}) => {
   )
 }
 
-
+// The main app (and its elements)
 const App = ({names}) => {
   const [ nameFilter, setNameFilter ] = useState('')
   const [ person, setPersonFilter ] = useState('')
 
+  // names order changes
   const handleOrder = () => {
     console.log('clicked order')
     setNameFilter('order')
@@ -47,6 +50,7 @@ const App = ({names}) => {
     setNameFilter('alpha')
   }
 
+  // requested name changes
   const handleChange = (event) => {
     setPersonFilter(event.target.value);
   }
