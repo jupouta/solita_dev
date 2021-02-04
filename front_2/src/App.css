@@ -1,10 +1,57 @@
 .App {
   text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  font-size: 110%;
+  color: dimgray;
+  
 }
 
 ul {
   text-align: center;
   list-style: inside;
+  list-style-type: none;
+  border-style: solid;
+  border-width: 5px;
+  border-color: purple;
+}
+li {
+  background: #ffe5e5;
+  list-style-type: #ffe5e5;
+  padding: 5px;
+  margin-left: 35px;
 }
 
+p.important {
+  border-style: solid;
+  border-width: 5px;
+  border-color: purple;
+  padding-top: 40px;
+  padding-right: 25px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+}
+
+p {
+  font-size: 120%;
+  color: dimgray;
+}
+
+h2 {
+  font-variant: small-caps;
+}
+
+button, select {
+  font-variant: small-caps;
+  background-color: burlywood;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+label {
+  font-variant: small-caps;
+}
 

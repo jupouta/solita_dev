@@ -8,7 +8,7 @@ To use the API, start the backend and either one of the frontends.
 #### Backend
 * Go to the backend directory:  `cd back`
 * Start the backend: `npm start`
-* The backend is at localhost:3001.
+* The backend will run at localhost:3001.
 
 #### Frontend from terminal
 * Go to the directory: `cd front`

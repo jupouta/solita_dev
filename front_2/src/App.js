@@ -62,15 +62,13 @@ const App = ({names}) => {
     <div className="App">
       <h2>Names @ Solita</h2>
       <Names names={names} nameState={nameFilter}/>
-      <p>
+      <p class="important">
         The total of all the names is {total}.
       </p>
   
       <label htmlFor="order-select">Choose an order:</label>
       <p>
         <button onClick={handleAlpha} className="button">Alphabetical order</button>
-      </p>
-      <p>
         <button onClick={handleOrder} className="button">Order the names!</button>
       </p>
 
